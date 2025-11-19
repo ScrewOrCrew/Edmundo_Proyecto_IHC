@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Correo</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+        /* Usamos variables para que el Alto Contraste funcione */
+        .container {
+            padding: 40px;
+            max-width: 500px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        .btn-save {
+            background-color: var(--imss-green);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-save:hover { background-color: var(--imss-dark); }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: var(--imss-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Actualizar Correo Electrónico</header>
+
+            <div class="container">
+                <h3 style="color: var(--imss-green); margin-top: 0;">Nuevo Correo</h3>
+                <p style="color: #666; margin-bottom: 20px;">Ingresa tu nueva dirección de correo para recibir notificaciones.</p>
+
+                <input type="email" placeholder="Nuevo correo electrónico">
+                <input type="email" placeholder="Confirmar nuevo correo">
+
+                <button class="btn-save" onclick="alert('Correo actualizado correctamente')">Guardar Cambios</button>
+
+                <a href="09-configuracion.html" class="back-link">Cancelar y Volver</a>
+            </div>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+</body>
+</html>

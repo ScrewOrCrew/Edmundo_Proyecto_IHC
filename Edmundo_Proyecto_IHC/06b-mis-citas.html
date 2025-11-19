@@ -3,69 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Mis Citas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; background-color: #f5f5f5; height: 100vh; display: flex; }
-        .sidebar { width: 250px; background-color: #e0e0e0; display: flex; flex-direction: column; padding: 20px; flex-shrink: 0; }
-        .logo-area { display: flex; align-items: center; margin-bottom: 40px; color: #10312B; font-weight: 700; font-size: 20px; }
-        .menu { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
-        .menu li { margin-bottom: 10px; }
-        .menu a { display: flex; align-items: center; text-decoration: none; color: #666; padding: 12px 15px; border-radius: 12px; font-weight: 600; transition: all 0.3s; }
-        .menu a.active { background-color: #006657; color: white; box-shadow: 0 4px 10px rgba(0,102,87,0.2); }
-        .menu a:hover:not(.active) { background-color: #d6d6d6; color: #006657; }
-        .material-icons-round { margin-right: 15px; font-size: 20px; }
-        .main-content { flex-grow: 1; padding: 30px; overflow-y: auto; }
-        
-        /* ESTILOS ESPECÍFICOS DE CITAS */
         .cita-item {
-            background: white; padding: 20px; border-radius: 15px; margin-bottom: 15px;
+            background: var(--card-bg);
+            padding: 20px; border-radius: 15px; margin-bottom: 15px;
             display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 6px solid #006657;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 6px solid var(--imss-green);
         }
-        .cita-info h3 { margin: 0 0 5px 0; color: #006657; }
-        .cita-info p { margin: 3px 0; color: #555; font-size: 14px; }
+        .cita-info h3 { margin: 0 0 5px 0; color: var(--imss-green); }
+        .cita-info p { margin: 3px 0; color: var(--text-color); font-size: 14px; }
         .btn-cancel {
-            background-color: #fee; color: #c0392b; padding: 8px 15px; text-decoration: none;
-            border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid #c0392b;
+            background-color: transparent; color: var(--imss-red); padding: 8px 15px; text-decoration: none;
+            border-radius: 8px; font-weight: 600; font-size: 13px; border: 1px solid var(--imss-red);
         }
+        .btn-cancel:hover { background-color: var(--imss-red); color: white; }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo-area"><span class="material-icons-round" style="font-size:30px; color:#006657;">health_and_safety</span> AIMSS</div>
-        <ul class="menu">
-            <li><a href="05-inicio.html"><span class="material-icons-round">dashboard</span>Inicio</a></li>
-            <li><a href="06-citas.html" class="active"><span class="material-icons-round">calendar_today</span>Citas</a></li>
-            <li><a href="12-directorio.html"><span class="material-icons-round">medical_services</span>Doctor</a></li>
-            <li><a href="07-vigencia.html"><span class="material-icons-round">verified</span>Vigencia</a></li>
-            <li><a href="09-configuracion.html"><span class="material-icons-round">settings</span>Ajustes</a></li>
-        </ul>
-    </div>
-
-    <div class="main-content">
-        <h2 style="color:#006657;">Mis Próximas Citas</h2>
-
-        <div class="cita-item">
-            <div class="cita-info">
-                <h3>Medicina Familiar</h3>
-                <p><strong>UMF 23</strong> - Consultorio 4</p>
-                <p>12 de Diciembre 2025 - 09:00 AM</p>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Mis Próximas Citas</header>
+            <div class="cita-item">
+                <div class="cita-info">
+                    <h3>Medicina Familiar</h3>
+                    <p><strong>UMF 23</strong> - Consultorio 4</p>
+                    <p>12 de Diciembre 2025 - 09:00 AM</p>
+                </div>
+                <a href="#" class="btn-cancel">Cancelar</a>
             </div>
-            <a href="#" class="btn-cancel">Cancelar</a>
-        </div>
-
-        <div class="cita-item" style="border-left-color: #BC955C;">
-            <div class="cita-info">
-                <h3>Nutrición</h3>
-                <p><strong>UMF 89</strong> - Consultorio 2</p>
-                <p>15 de Diciembre 2025 - 11:00 AM</p>
+            <div class="cita-item" style="border-left-color: var(--imss-gold);">
+                <div class="cita-info">
+                    <h3>Nutrición</h3>
+                    <p><strong>UMF 89</strong> - Consultorio 2</p>
+                    <p>15 de Diciembre 2025 - 11:00 AM</p>
+                </div>
+                <a href="#" class="btn-cancel">Cancelar</a>
             </div>
-            <a href="#" class="btn-cancel">Cancelar</a>
+            <a href="06-citas.html" style="display:inline-block; margin-top:20px; color:var(--imss-green); text-decoration:none; font-weight:600;">⬅ Volver al menú</a>
         </div>
-        
-        <a href="06-citas.html" style="display:inline-block; margin-top:20px; color:#006657; text-decoration:none; font-weight:600;">⬅ Volver al menú de citas</a>
     </div>
+    <script src="sidebar.js"></script>
 </body>
 </html>

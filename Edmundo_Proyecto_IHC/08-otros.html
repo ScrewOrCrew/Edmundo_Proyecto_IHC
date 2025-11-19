@@ -2,119 +2,65 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Otros Trámites - AIMSS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Otros Trámites</title>
+    <link rel="stylesheet" href="sidebar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
-        /* ... (Pega los estilos base del sidebar aquí) ... */
-        * { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; background-color: #f5f5f5; height: 100vh; display: flex; }
-        .sidebar { width: 250px; background-color: #e0e0e0; display: flex; flex-direction: column; padding: 20px; flex-shrink: 0; }
-        .logo-area { display: flex; align-items: center; margin-bottom: 40px; color: #10312B; font-weight: 700; font-size: 20px; }
-        .logo-area span { margin-left: 10px; }
-        .menu { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
-        .menu li { margin-bottom: 10px; }
-        .menu a { display: flex; align-items: center; text-decoration: none; color: #666; padding: 12px 15px; border-radius: 12px; font-weight: 600; transition: all 0.3s; }
-        .menu a .material-icons-round { margin-right: 15px; font-size: 20px; }
-        .menu a.active { background-color: #006657; color: white; box-shadow: 0 4px 10px rgba(0,102,87,0.2); }
-        .menu a:hover:not(.active) { background-color: #d6d6d6; color: #006657; }
-        .sidebar-footer { border-top: 1px solid #ccc; padding-top: 20px; }
-        .main-content { flex-grow: 1; padding: 30px; overflow-y: auto; }
-
-        /* ESTILOS ESPECÍFICOS DE GRID */
+        /* Grid responsive */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
-            margin-top: 20px;
         }
-
+        /* Uso de variables para soportar alto contraste */
         .tramite-card {
-            background: white;
+            background: var(--card-bg); /* Variable clave */
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.2s;
-            border-top: 5px solid #9F2241; /* Rojo Complementario del Manual para trámites admin */
+            border-top: 5px solid var(--imss-red); /* Variable */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 180px;
             text-decoration: none;
-            color: #333;
+            color: var(--text-color); /* Variable */
         }
-
         .tramite-card:hover { transform: translateY(-5px); }
-        .tramite-card h3 { margin: 0 0 10px 0; color: #006657; font-size: 18px; }
-        .tramite-card p { font-size: 13px; color: #666; line-height: 1.4; margin: 0; }
-        .icon-right { align-self: flex-end; color: #BC955C; font-size: 35px; margin-top: auto; }
+        .tramite-card h3 { margin: 0 0 10px 0; color: var(--imss-green); font-size: 18px; }
+        .tramite-card p { font-size: 13px; color: inherit; opacity: 0.8; line-height: 1.4; margin: 0; }
+        .icon-right { align-self: flex-end; color: var(--imss-gold); font-size: 35px; }
     </style>
 </head>
 <body>
-
-    <div class="sidebar">
-        <div class="logo-area">
-            <span class="material-icons-round" style="font-size:30px; color:#006657;">health_and_safety</span>
-            <span>AIMSS</span>
-        </div>
-        <ul class="menu">
-            <li><a href="05-inicio.html"><span class="material-icons-round">dashboard</span>Inicio</a></li>
-            <li><a href="06-citas.html"><span class="material-icons-round">calendar_today</span>Citas</a></li>
-            <li><a href="12-directorio.html"><span class="material-icons-round">medical_services</span>Doctor</a></li>
-            <li><a href="#"><span class="material-icons-round">chat</span>Mensaje</a></li>
-            <li><a href="07-vigencia.html"><span class="material-icons-round">verified</span>Vigencia</a></li>
-            <li><a href="09-configuracion.html"><span class="material-icons-round">settings</span>Ajustes</a></li>
-        </ul>
-        <div class="sidebar-footer menu">
-            <li><a href="02-login.html"><span class="material-icons-round">logout</span>Cerrar Sesión</a></li>
-        </div>
-    </div>
-
-    <div class="main-content">
-        <h2 style="color:#10312B; margin-top:0;">Gestión de Trámites</h2>
-        <p style="color:#666;">Selecciona el trámite administrativo que deseas realizar.</p>
-
-        <div class="grid-container">
-            <a href="08a-nss.html" class="tramite-card">
-                <div>
-                    <h3>Asignación de NSS</h3>
-                    <p>Obtén o consulta tu Número de Seguridad Social.</p>
-                </div>
-                <span class="material-icons-round icon-right">fingerprint</span>
-            </a>
-
-            <a href="08b-no-derecho.html" class="tramite-card">
-                <div>
-                    <h3>Constancia No Derechohabiencia</h3>
-                    <p>Documento que certifica que no tienes servicio vigente.</p>
-                </div>
-                <span class="material-icons-round icon-right">block</span>
-            </a>
-
-            <a href="08c-cartilla.html" class="tramite-card">
-                <div>
-                    <h3>Reimpresión de Cartilla</h3>
-                    <p>Recupera la carátula de tu cartilla nacional.</p>
-                </div>
-                <span class="material-icons-round icon-right">book</span>
-            </a>
-
-            <a href="08d-semanas.html" class="tramite-card">
-                <div>
-                    <h3>Semanas Cotizadas</h3>
-                    <p>Consulta tu historial de cotización laboral.</p>
-                </div>
-                <span class="material-icons-round icon-right">history</span>
-            </a>
-            
-            <a href="08f-beneficiarios.html" class="tramite-card">
-                <div>
-                    <h3>Alta de Beneficiarios</h3>
-                    <p>Registra a tus familiares para recibir atención.</p>
-                </div>
-                <span class="material-icons-round icon-right">family_restroom</span>
-            </a>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Gestión de Trámites</header>
+            <div class="grid-container">
+                <a href="08a-nss.html" class="tramite-card">
+                    <div><h3>Asignación de NSS</h3><p>Obtén o consulta tu Número de Seguridad Social.</p></div>
+                    <span class="material-icons-round icon-right">fingerprint</span>
+                </a>
+                <a href="08b-no-derecho.html" class="tramite-card">
+                    <div><h3>Constancia No Derechohabiencia</h3><p>Documento que certifica que no tienes servicio vigente.</p></div>
+                    <span class="material-icons-round icon-right">block</span>
+                </a>
+                <a href="08c-cartilla.html" class="tramite-card">
+                    <div><h3>Reimpresión de Cartilla</h3><p>Recupera la carátula de tu cartilla nacional.</p></div>
+                    <span class="material-icons-round icon-right">book</span>
+                </a>
+                <a href="08d-semanas.html" class="tramite-card">
+                    <div><h3>Semanas Cotizadas</h3><p>Consulta tu historial de cotización laboral.</p></div>
+                    <span class="material-icons-round icon-right">history</span>
+                </a>
+                <a href="08f-beneficiarios.html" class="tramite-card">
+                    <div><h3>Alta de Beneficiarios</h3><p>Registra a tus familiares para recibir atención.</p></div>
+                    <span class="material-icons-round icon-right">family_restroom</span>
+                </a>
+            </div>
         </div>
     </div>
+    <script src="sidebar.js"></script>
 </body>
 </html>
