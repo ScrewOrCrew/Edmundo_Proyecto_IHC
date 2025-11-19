@@ -1,121 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Constancia de No Derechohabiencia</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f3f8f6;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        header {
-            background-color: #006657;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 20px;
-            position: relative;
-        }
-
-        .back-btn {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .box {
-            background: white;
-            padding: 20px;
-            max-width: 380px;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-
-        label {
-            display: block;
-            text-align: left;
-            color: #006657;
-            font-size: 14px;
-            margin-bottom: 5px;
-            margin-top: 15px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-
-        button {
-            width: 100%;
-            background-color: #009879;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-
-        .back {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back a {
-            color: #006657;
-            text-decoration: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>No Derechohabiencia</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
-
 <body>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Trámites Digitales</header>
+            <div class="box-container">
+                <h3>Constancia de No Derechohabiencia</h3>
+                <p>Documento que certifica la inexistencia de registro vigente.</p>
 
-    <header>
-        Constancia de No Derechohabiencia
-    </header>
+                <label>CURP</label>
+                <input type="text" placeholder="Ingresa tu CURP">
 
-    <div class="container">
-        <div class="box">
+                <label>Correo Electrónico</label>
+                <input type="email" placeholder="ejemplo@correo.com">
 
-            <h3 style="color:#006657; text-align:center; margin-top:0;">
-                Generar Constancia
-            </h3>
-
-            <label>CURP:</label>
-            <input type="text" placeholder="Ingresa tu CURP">
-
-            <label>Correo electrónico:</label>
-            <input type="email" placeholder="example@correo.com">
-
-            <a href="08b-prev.html">
-                <button>Continuar</button>
-            </a>
-
+                <a href="08b-prev.html" class="button">Generar Constancia</a>
+            </div>
+            <div class="back"><a href="08-otros.html">⬅ Regresar a Trámites</a></div>
         </div>
-
-        <div class="back">
-            <a href="08-otros.html">⬅ Regresar</a>
-        </div>
-
     </div>
-
+    <script src="sidebar.js"></script>
 </body>
 </html>

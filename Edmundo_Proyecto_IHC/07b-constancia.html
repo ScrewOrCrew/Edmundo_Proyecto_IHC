@@ -1,136 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Constancia de Vigencia</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #e9f3ef;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        header {
-            background-color: #006657;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 20px;
-        }
-
-        .container {
-            padding: 25px;
-        }
-
-        .doc {
-            background: white;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.15);
-        }
-
-        .title {
-            text-align: center;
-            color: #006657;
-            margin-bottom: 25px;
-        }
-
-        .field {
-            margin-bottom: 15px;
-        }
-
-        .label {
-            font-weight: bold;
-            color: #006657;
-        }
-
-        .value {
-            color: #444;
-        }
-
-        .divider {
-            height: 1px;
-            background: #ccc;
-            margin: 18px 0;
-        }
-
-        .button {
-            display: block;
-            background-color: #009879;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            margin-top: 20px;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        .back {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back a {
-            color: #006657;
-            text-decoration: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Vista Previa</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
-
 <body>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Constancia de Vigencia</header>
+            
+            <div class="box-container" style="max-width: 600px;"> <h3>IMSS — Vigencia de Derechos</h3>
+                <p>Verifica que los datos sean correctos antes de descargar.</p>
+                
+                <div style="text-align:left; background:var(--bg-color); padding:20px; border-radius:8px; margin-bottom:20px;">
+                    <p style="text-align:left; margin:5px 0;"><strong>Nombre:</strong> Juan Pérez Martínez</p>
+                    <p style="text-align:left; margin:5px 0;"><strong>CURP:</strong> PEMJ900101HDFRRN01</p>
+                    <p style="text-align:left; margin:5px 0;"><strong>NSS:</strong> 12345678901</p>
+                    <hr style="border:0; border-top:1px solid #ccc; margin:15px 0;">
+                    <p style="text-align:left; margin:5px 0;"><strong>Estatus:</strong> <span style="color:var(--imss-green); font-weight:bold;">VIGENTE</span></p>
+                    <p style="text-align:left; margin:5px 0;"><strong>Unidad Médica:</strong> UMF 23 — Ciudad de México</p>
+                    <p style="text-align:left; margin:5px 0;"><strong>Fecha:</strong> 19/11/2025</p>
+                </div>
 
-<header>Constancia de Vigencia</header>
-
-<div class="container">
-
-    <div class="doc">
-        <h2 class="title">IMSS — Constancia de Vigencia de Derechos</h2>
-
-        <div class="field">
-            <span class="label">Nombre:</span>
-            <span class="value">Juan Pérez Martínez</span>
+                <a href="07a-descargar.html" class="button">Descargar PDF</a>
+            </div>
+            
+            <div class="back"><a href="07-vigencia.html">⬅ Corregir datos</a></div>
         </div>
-
-        <div class="field">
-            <span class="label">CURP:</span>
-            <span class="value">PEMJ900101HDFRRN01</span>
-        </div>
-
-        <div class="field">
-            <span class="label">NSS:</span>
-            <span class="value">12345678901</span>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="field">
-            <span class="label">Estatus:</span>
-            <span class="value" style="color:green; font-weight:bold;">Vigente</span>
-        </div>
-
-        <div class="field">
-            <span class="label">Unidad Médica:</span>
-            <span class="value">UMF 23 — Ciudad de México</span>
-        </div>
-
-        <div class="field">
-            <span class="label">Fecha de Emisión:</span>
-            <span class="value">18/11/2025</span>
-        </div>
-
-        <a href="07a-descargar.html" class="button">Descargar PDF</a>
     </div>
-
-    <div class="back">
-        <a href="07-vigencia.html">⬅ Regresar</a>
-    </div>
-
-</div>
-
+    <script src="sidebar.js"></script>
 </body>
 </html>

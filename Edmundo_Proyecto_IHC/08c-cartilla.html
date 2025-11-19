@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reimpresión de Cartilla</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; }
-        body { background-color: #f3f8f6; font-family: 'Montserrat', sans-serif; margin: 0; }
-        header { background-color: #006657; color: white; padding: 15px; text-align: center; font-weight: 700; }
-        .box-container { max-width: 400px; margin: 40px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        label { color: #006657; font-weight: bold; display: block; margin-bottom: 5px; }
-        input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; font-family: 'Montserrat', sans-serif; }
-        .button { width: 100%; display: block; text-align: center; padding: 12px 0; background-color: #009879; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; border: none; cursor: pointer; }
-        .button:hover { background-color: #006657; }
-        .back { text-align: center; margin-top: 20px; }
-        .back a { color: #006657; text-decoration: none; }
-    </style>
+    <meta charset="UTF-8">
+    <title>Cartilla de Salud</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
 <body>
-    <header>Reimpresión de Cartilla</header>
-    <div class="box-container">
-        <h3 style="color:#006657; text-align:center; margin-top:0;">Recuperar Carátula</h3>
-        <p style="color:#666; font-size:14px; margin-bottom:20px;">Ingresa tus datos para generar el PDF de tu Cartilla Nacional de Salud.</p>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Trámites Digitales</header>
+            <div class="box-container">
+                <h3>Reimpresión de Cartilla</h3>
+                <p>Recupera la carátula de tu Cartilla Nacional de Salud.</p>
 
-        <label>NSS (Número de Seguridad Social)</label>
-        <input type="number" placeholder="11 dígitos" />
+                <label>NSS</label>
+                <input type="number" placeholder="Número de Seguridad Social">
 
-        <label>CURP</label>
-        <input type="text" placeholder="Clave Única de Registro" />
+                <label>CURP</label>
+                <input type="text" placeholder="Clave Única de Registro">
 
-        <label>Correo Electrónico</label>
-        <input type="email" placeholder="Para enviar el archivo" />
+                <label>Correo Electrónico</label>
+                <input type="email" placeholder="Para enviar el archivo">
 
-        <a href="#" class="button" onclick="alert('Documento enviado a tu correo.')">Generar Cartilla</a>
+                <button onclick="alert('Documento enviado a tu correo.')">Generar Cartilla</button>
+            </div>
+            <div class="back"><a href="08-otros.html">⬅ Regresar a Trámites</a></div>
+        </div>
     </div>
-    <div class="back"><a href="08-otros.html">⬅ Regresar</a></div>
+    <script src="sidebar.js"></script>
 </body>
 </html>

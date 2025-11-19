@@ -8,20 +8,29 @@
     <style>
         .hospital-card {
             display: flex;
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 20px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            color: var(--text-color);
         }
         .hospital-img {
             width: 120px;
             background-size: cover;
             background-position: center;
+            flex-shrink: 0;
         }
-        .hospital-info { padding: 20px; flex: 1; }
+        .hospital-info { padding: 20px; flex: 1; text-align: left; }
         .hospital-info h3 { margin: 0 0 5px; color: var(--imss-green); }
-        .tag { background: #eee; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: #555; }
+        .hospital-info p { margin: 0 0 10px; font-size: 14px; opacity: 0.8; }
+        .tag { background: #eee; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; color: #555; margin-right: 5px; }
+        
+        /* Ajuste para móvil */
+        @media (max-width: 600px) {
+            .hospital-card { flex-direction: column; }
+            .hospital-img { width: 100%; height: 150px; }
+        }
     </style>
 </head>
 <body>
@@ -29,23 +38,43 @@
         <div class="main-content">
             <header>Directorio de Unidades</header>
             
-            <input type="text" placeholder="Buscar clínica..." style="width:100%; padding:15px; border-radius:30px; border:1px solid #ccc; margin-bottom:30px;">
+            <input type="text" placeholder="Buscar clínica, hospital o farmacia..." style="width:100%; padding:15px; border-radius:30px; border:1px solid #ccc; margin-bottom:30px; max-width:600px;">
 
-            <div class="hospital-card">
-                <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/martha-dominguez-de-gouveia-KF-h9HMxRKg-unsplash.jpg');"></div>
-                <div class="hospital-info">
-                    <h3>HGR 46 - Guadalajara</h3>
-                    <p>Calz. Lázaro Cárdenas 2063</p>
-                    <span class="tag">Urgencias 24h</span> <span class="tag">Especialidades</span>
+            <div style="max-width: 800px; width: 100%;">
+                <div class="hospital-card">
+                    <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/martha-dominguez-de-gouveia-KF-h9HMxRKg-unsplash.jpg');"></div>
+                    <div class="hospital-info">
+                        <h3>HGR 46 - Guadalajara</h3>
+                        <p>Calz. Lázaro Cárdenas 2063, 8 de Julio.</p>
+                        <span class="tag">Urgencias 24h</span> <span class="tag">Especialidades</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hospital-card">
-                <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/jeshoots-com-l0j0DHVWcIE-unsplash.jpg');"></div>
-                <div class="hospital-info">
-                    <h3>UMF 34 - Zapopan</h3>
-                    <p>Av. Colón 2000</p>
-                    <span class="tag">Medicina Familiar</span>
+                <div class="hospital-card">
+                    <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/jeshoots-com-l0j0DHVWcIE-unsplash.jpg');"></div>
+                    <div class="hospital-info">
+                        <h3>UMF 34 - Zapopan</h3>
+                        <p>Av. Colón 2000, Jardines del Country.</p>
+                        <span class="tag">Medicina Familiar</span> <span class="tag">Prevención</span>
+                    </div>
+                </div>
+
+                <div class="hospital-card">
+                    <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/pexels-shvetsa-3845810.jpg');"></div>
+                    <div class="hospital-info">
+                        <h3>Clínica Dental No. 5</h3>
+                        <p>Av. Vallarta 1500, Americana.</p>
+                        <span class="tag">Odontología</span> <span class="tag">Rayos X</span>
+                    </div>
+                </div>
+
+                <div class="hospital-card">
+                    <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/pexels-karola-g-4046945.jpg');"></div>
+                    <div class="hospital-info">
+                        <h3>Farmacia Central IMSS</h3>
+                        <p>Calle Independencia 450, Centro.</p>
+                        <span class="tag">Farmacia</span> <span class="tag">Abierto 24h</span>
+                    </div>
                 </div>
             </div>
         </div>

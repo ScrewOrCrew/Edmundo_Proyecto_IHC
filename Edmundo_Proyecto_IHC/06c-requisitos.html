@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <title>Requisitos</title>
     <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
         .req-box {
             background: var(--card-bg);
-            border-radius: 10px; padding: 20px; margin-bottom: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 10px; padding: 25px; margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; max-width: 600px;
+            text-align: left;
         }
-        .req-box h3 { margin: 0 0 10px; color: var(--imss-green); }
-        ul { padding-left: 20px; color: var(--text-color); }
-        li { margin-bottom: 5px; }
+        .req-box h3 { margin: 0 0 10px; color: var(--imss-green); display: flex; align-items: center; }
+        .req-box h3 .material-icons-round { margin-right: 10px; color: var(--imss-gold); }
+        ul { padding-left: 20px; color: var(--text-color); margin: 0; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
     <div class="page-container">
         <div class="main-content">
             <header>Requisitos para Consulta</header>
+            
             <div class="req-box">
-                <h3>Documentación Obligatoria</h3>
+                <h3><i class="material-icons-round">folder_shared</i> Documentación Obligatoria</h3>
                 <ul>
-                    <li>Identificación oficial (INE o Pasaporte)</li>
-                    <li>Cartilla Nacional de Salud</li>
-                    <li>Vigencia de Derechos impresa</li>
+                    <li>Identificación oficial vigente (INE, Pasaporte o Cédula).</li>
+                    <li>Cartilla Nacional de Salud original.</li>
+                    <li>Impresión de la Vigencia de Derechos.</li>
+                    <li>Comprobante de la cita agendada.</li>
                 </ul>
             </div>
+
             <div class="req-box">
-                <h3>Recomendaciones</h3>
+                <h3><i class="material-icons-round">health_and_safety</i> Recomendaciones</h3>
                 <ul>
-                    <li>Llegar 15 minutos antes de la cita</li>
-                    <li>Usar cubrebocas en áreas cerradas</li>
+                    <li>Presentarse 15 minutos antes de la hora indicada.</li>
+                    <li>Uso de cubrebocas en áreas cerradas o si presenta síntomas.</li>
+                    <li>Evitar ir acompañado salvo que sea estrictamente necesario.</li>
                 </ul>
             </div>
+
+            <div class="req-box">
+                <h3><i class="material-icons-round">info</i> Casos Especiales</h3>
+                <ul>
+                    <li>Pacientes crónicos: llevar carnet de citas anterior.</li>
+                    <li>Laboratorio: Presentarse en ayuno de 8 horas.</li>
+                </ul>
+            </div>
+
             <div style="text-align:center; margin-top:20px;">
-                <a href="06-citas.html" style="color:var(--imss-green); text-decoration:none; font-weight:bold;">⬅ Regresar</a>
+                <a href="06-citas.html" class="button" style="max-width:200px; margin: 0 auto;">Volver a Citas</a>
             </div>
         </div>
     </div>
