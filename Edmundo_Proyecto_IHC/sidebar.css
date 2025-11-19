@@ -11,6 +11,7 @@
     --text-color: #333;
     --input-bg: #ffffff;
     --border-color: #ccc;
+    --sidebar-bg: #ffffff;
     --sidebar-width: 260px;
     --sidebar-collapsed: 80px;
 }
@@ -23,57 +24,80 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-/* --- MODO OSCURO (DARK MODE PRO) --- */
+/* --- MODO OSCURO / ALTO CONTRASTE (CORREGIDO) --- */
 body.high-contrast {
-    --imss-green: #4db6ac; /* Verde más suave para oscuro */
-    --imss-gold: #FFD54F;  /* Dorado brillante */
+    --imss-green: #4db6ac; 
+    --imss-gold: #FFD54F;
     --imss-red: #e57373;
     --imss-dark: #80cbc4;
-    --bg-color: #121212;   /* Gris casi negro elegante */
-    --card-bg: #1E1E1E;    /* Gris tarjeta */
-    --text-color: #E0E0E0; /* Blanco humo */
+    --bg-color: #121212;   /* Fondo principal oscuro */
+    --card-bg: #1E1E1E;    /* Fondo de tarjetas gris oscuro */
+    --sidebar-bg: #1c1c1c; /* Sidebar gris oscuro (NO NEGRO) */
+    --text-color: #E0E0E0; 
     --input-bg: #2d2d2d;
     --border-color: #444;
 }
-/* Arreglo de textos en modo oscuro */
-body.high-contrast .sidebar { background-color: #000; border-right: 1px solid #333; }
+
+/* Correcciones específicas de Modo Oscuro */
+body.high-contrast .sidebar { border-right: 1px solid #333; }
 body.high-contrast .sidebar-item { color: #aaa; }
-body.high-contrast .sidebar-item:hover { background-color: #222; color: var(--imss-green); }
+body.high-contrast .sidebar-item:hover { background-color: #333; color: var(--imss-green); }
 body.high-contrast input, body.high-contrast select { background-color: var(--input-bg); color: white; border-color: var(--border-color); }
-body.high-contrast .account-link h4 { color: white; }
-body.high-contrast .account-link p { color: #aaa; }
+body.high-contrast .hospital-card { color: white; }
 
 /* --- LAYOUT --- */
 .page-container { display: flex; min-height: 100vh; }
 
 /* SIDEBAR */
 .sidebar {
-    width: var(--sidebar-collapsed); background-color: #ffffff;
+    width: var(--sidebar-collapsed); 
+    background-color: var(--sidebar-bg); /* Usa variable */
     position: fixed; left: 0; top: 0; bottom: 0; z-index: 1000;
     box-shadow: 4px 0 15px rgba(0,0,0,0.05);
     transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow-x: hidden; white-space: nowrap;
 }
 .sidebar:hover { width: var(--sidebar-width); }
-.sidebar-header { height: 80px; display: flex; align-items: center; padding: 0 20px; background-color: #006657; color: white; }
+
+.sidebar-header { height: 80px; display: flex; align-items: center; padding: 0 20px; background-color: var(--imss-green); color: white; }
 .sidebar-title { font-size: 20px; font-weight: 700; margin-left: 15px; opacity: 0; transition: 0.3s; }
 .sidebar:hover .sidebar-title { opacity: 1; }
+
 .sidebar-nav { padding-top: 20px; }
 .sidebar-item { display: flex; align-items: center; padding: 15px 25px; color: #555; text-decoration: none; transition: 0.2s; border-left: 5px solid transparent; }
-.sidebar-item:hover { background-color: #f0f0f0; color: #006657; }
-.sidebar-item.active { background-color: #e8f5e9; color: #006657; border-left-color: var(--imss-gold); font-weight: 600; }
+.sidebar-item:hover { background-color: #f0f0f0; color: var(--imss-green); }
+.sidebar-item.active { background-color: #e8f5e9; color: var(--imss-green); border-left-color: var(--imss-gold); font-weight: 600; }
+/* Fix para modo oscuro del item activo */
+body.high-contrast .sidebar-item.active { background-color: #333; color: var(--imss-gold); }
+
 .sidebar-icon { font-size: 24px; min-width: 30px; text-align: center; display: flex; justify-content: center; }
 .sidebar-text { margin-left: 15px; opacity: 0; transition: 0.3s; }
 .sidebar:hover .sidebar-text { opacity: 1; }
 
-/* CONTENIDO */
-.main-content { flex: 1; margin-left: var(--sidebar-collapsed); padding: 30px; transition: margin-left 0.4s; display: flex; flex-direction: column; align-items: center; }
-header { width: 100%; max-width: 800px; font-size: 28px; font-weight: 700; color: var(--imss-green); margin-bottom: 30px; border-bottom: 2px solid var(--imss-gold); padding-bottom: 10px; text-align: left; }
-body.high-contrast header { color: var(--imss-green); }
+/* CONTENIDO PRINCIPAL (CORREGIDO: YA NO CENTRA A LA FUERZA) */
+.main-content { 
+    flex: 1; 
+    margin-left: var(--sidebar-collapsed); 
+    padding: 30px; 
+    transition: margin-left 0.4s; 
+    /* display: block;  <-- Por defecto es block, esto permite el ancho completo */
+}
 
-/* COMPONENTES ESTÁNDAR (EL "MOLDE") */
+header { 
+    width: 100%; 
+    font-size: 28px; font-weight: 700; color: var(--imss-green); 
+    margin-bottom: 30px; border-bottom: 2px solid var(--imss-gold); 
+    padding-bottom: 10px; text-align: left; 
+}
+
+/* CLASES DE CONTENEDORES */
+.container-full {
+    width: 100%;
+    /*max-width: 1400px;  Opcional: Limita el ancho en pantallas gigantes */
+}
+
 .box-container {
-    max-width: 500px; width: 100%; margin: 0 auto;
+    max-width: 500px; width: 100%; margin: 0 auto; /* Este sí centra formularios pequeños */
     background: var(--card-bg); padding: 35px;
     border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.05);
     text-align: left;
@@ -81,11 +105,12 @@ body.high-contrast header { color: var(--imss-green); }
 .box-container h3 { color: var(--imss-green); text-align: center; margin-top: 0; }
 .box-container p { color: var(--text-color); font-size: 14px; margin-bottom: 20px; text-align: center; opacity: 0.8; }
 
+/* FORMULARIOS */
 label { color: var(--imss-green); font-weight: 700; display: block; margin-bottom: 5px; margin-top: 15px; }
 input, select { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); font-family: 'Montserrat', sans-serif; box-sizing: border-box; background-color: var(--input-bg); color: var(--text-color); }
 input:focus, select:focus { border-color: var(--imss-gold); outline: none; }
 
-/* BOTONES CORREGIDOS */
+/* BOTONES */
 .button, .btn, button {
     width: 100%; display: block; text-align: center; padding: 14px 0;
     background-color: var(--imss-green); color: white;

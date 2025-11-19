@@ -7,123 +7,83 @@
     <link rel="stylesheet" href="sidebar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
-        /* Estilos exclusivos de esta página */
         .welcome-banner {
-            /* Ruta corregida para tu carpeta de imágenes */
             background-image: linear-gradient(rgba(0, 102, 87, 0.9), rgba(0, 102, 87, 0.7)), 
                               url('IMÁGENES PARA EL AIMSS/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-size: cover; background-position: center; color: white;
+            padding: 40px; border-radius: 15px; margin-bottom: 30px;
+            display: flex; justify-content: space-between; align-items: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .welcome-text h1 { margin: 0; font-size: 24px; font-weight: 700; }
-        .welcome-text p { margin: 5px 0 0; opacity: 0.9; font-size: 14px; }
-        
         .grid-dashboard {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 25px;
         }
-
         .card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border: 1px solid #eee;
+            background: var(--card-bg); /* Variable para modo oscuro */
+            border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease; border: 1px solid #eee;
         }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-
-        .card-img {
-            height: 140px;
-            background-size: cover;
-            background-position: center;
-        }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { height: 140px; background-size: cover; background-position: center; }
         .card-content { padding: 20px; }
-        .card-content h3 { margin: 0 0 8px; color: #006657; font-size: 18px; font-weight: 700; }
-        .card-content p { margin: 0 0 15px; font-size: 13px; color: #666; line-height: 1.4; }
-        
-        .card-action { 
-            display: flex; 
-            align-items: center; 
-            justify-content: flex-end;
-            color: #BC955C; /* Dorado */
-            font-weight: 700; 
-            text-decoration: none; 
-            font-size: 13px; 
-            letter-spacing: 0.5px;
-        }
-        .card-action:hover { color: #006657; }
-        .material-icons-round { font-size: 18px; margin-left: 5px; }
+        .card-content h3 { margin: 0 0 8px; color: var(--imss-green); }
+        .card-content p { color: var(--text-color); }
+        .card-action { display: block; text-align: right; color: var(--imss-gold); font-weight: bold; text-decoration: none; margin-top: 10px; }
     </style>
 </head>
 <body>
     <div class="page-container">
         <div class="main-content">
-            
             <div class="welcome-banner">
-                <div class="welcome-text">
-                    <h1>¡Bienvenido a tu Portal IMSS!</h1>
-                    <p>Tu salud y bienestar en un solo lugar.</p>
+                <div>
+                    <h1 style="margin:0;">¡Bienvenido a tu Portal IMSS!</h1>
+                    <p style="margin:5px 0 0;">Tu salud y bienestar en un solo lugar.</p>
                 </div>
-                <div style="background: white; padding: 8px; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                <div style="background: white; padding: 8px; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                     <img src="IMÁGENES PARA EL AIMSS/imss-seeklogo.png" width="40" alt="Logo">
                 </div>
             </div>
 
-            <h3 style="color: #10312B; border-left: 5px solid #BC955C; padding-left: 15px; margin-bottom: 20px;">Servicios Destacados</h3>
+            <h3 style="color: var(--imss-dark); border-left: 5px solid var(--imss-gold); padding-left: 15px;">Servicios Destacados</h3>
 
             <div class="grid-dashboard">
-                
                 <div class="card">
                     <div class="card-img" style="background-image: url('IMÁGENES PARA EL AIMSS/alexandr-podvalny-tE7_jvK-_YU-unsplash.jpg');"></div>
                     <div class="card-content">
                         <h3>Agendar Cita</h3>
-                        <p>Programa tu consulta médica familiar o dental en tu clínica asignada.</p>
-                        <a href="06-citas.html" class="card-action">IR A CITAS <span class="material-icons-round">arrow_forward</span></a>
+                        <p>Programa tu consulta médica familiar o dental.</p>
+                        <a href="06-citas.html" class="card-action">IR A CITAS ➝</a>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-img" style="background-image: url('IMÁGENES PARA EL AIMSS/online-marketing-hIgeoQjS_iE-unsplash.jpg');"></div>
                     <div class="card-content">
                         <h3>Vigencia de Derechos</h3>
-                        <p>Consulta si tu seguro se encuentra activo para recibir atención.</p>
-                        <a href="07-vigencia.html" class="card-action">CONSULTAR <span class="material-icons-round">arrow_forward</span></a>
+                        <p>Consulta si tu seguro se encuentra activo.</p>
+                        <a href="07-vigencia.html" class="card-action">CONSULTAR ➝</a>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-img" style="background-image: url('IMÁGENES PARA EL AIMSS/luis-melendez-Pd4lRfKo16U-unsplash.jpg');"></div>
                     <div class="card-content">
                         <h3>Directorio Médico</h3>
-                        <p>Ubica hospitales, farmacias y urgencias cercanas a tu ubicación.</p>
-                        <a href="12-directorio.html" class="card-action">BUSCAR <span class="material-icons-round">arrow_forward</span></a>
+                        <p>Ubica hospitales y clínicas cercanas.</p>
+                        <a href="12-directorio.html" class="card-action">BUSCAR ➝</a>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-img" style="background-image: url('IMÁGENES PARA EL AIMSS/nappy-dcBO4nt4MRE-unsplash.jpg'); background-position: top;"></div>
                     <div class="card-content">
                         <h3>Tarjeta Digital</h3>
                         <p>Accede a tu identificación oficial con código QR.</p>
-                        <a href="10-tarjeta-digital.html" class="card-action">VER TARJETA <span class="material-icons-round">arrow_forward</span></a>
+                        <a href="10-tarjeta-digital.html" class="card-action">VER TARJETA ➝</a>
                     </div>
                 </div>
-
             </div>
-            
         </div>
     </div>
-    
     <script src="sidebar.js"></script>
 </body>
 </html>

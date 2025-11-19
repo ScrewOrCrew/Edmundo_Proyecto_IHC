@@ -1,122 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Previsualización - Constancia de No Derechohabiencia</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f3f8f6;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        header {
-            background-color: #006657;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 20px;
-            position: relative;
-        }
-
-        .back-btn {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .box {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-
-        h2 {
-            color: #006657;
-            text-align: center;
-            margin-top: 0;
-        }
-
-        p, ul, li {
-            color: #444;
-            font-size: 14px;
-        }
-
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background-color: #009879;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        .button:hover {
-            background-color: #00795a;
-        }
-
-        .back {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .back a {
-            color: #006657;
-            text-decoration: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Previsualización</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
-
 <body>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Constancia de No Derechohabiencia</header>
+            
+            <div class="box-container" style="max-width: 650px;">
+                <h3>Vista Previa del Documento</h3>
+                
+                <div style="background: var(--bg-color); padding: 25px; border-radius: 10px; margin: 20px 0; border: 1px solid var(--border-color);">
+                    <h4 style="text-align: center; color: var(--imss-dark); margin-top: 0;">CONSTANCIA</h4>
+                    <p style="text-align: justify;">Por medio de la presente, se hace constar que el solicitante con CURP <strong>PEMJ990101HDFRRN01</strong> y correo <strong>usuario@ejemplo.com</strong> no cuenta con derecho a los servicios médicos del IMSS vigente al día de hoy.</p>
+                    <p style="text-align: justify;">Se extiende la presente para los fines legales que correspondan.</p>
+                    <br>
+                    <p style="text-align: right; font-weight: bold;">Instituto Mexicano del Seguro Social</p>
+                </div>
 
-    <header>
-        Previsualización - Constancia de No Derechohabiencia
-    </header>
-
-    <div class="container">
-        <div class="box">
-            <h2>CONSTANCIA</h2>
-
-            <p>Por medio de la presente, se hace constar que el solicitante con CURP <strong>[CURP]</strong> y correo <strong>[Correo Electrónico]</strong> no cuenta con derecho a los servicios médicos del IMSS.</p>
-
-            <p>Se extiende la presente constancia para los fines legales y administrativos que correspondan.</p>
-
-            <p style="margin-top: 20px;">
-                <strong>Atentamente</strong><br>
-                Instituto Mexicano del Seguro Social (IMSS)<br>
-                Fecha de emisión: <strong>[Fecha]</strong>
-            </p>
-
-            <a href="08b-listo.html" class="button">Descargar Constancia</a>
-        </div>
-
-        <div class="back">
-            <a href="08-otros.html">⬅ Volver</a>
+                <a href="08b-listo.html" class="button">Descargar y Finalizar</a>
+            </div>
+            
+            <div class="back"><a href="08b-no-derecho.html">⬅ Corregir datos</a></div>
         </div>
     </div>
-
+    <script src="sidebar.js"></script>
 </body>
 </html>

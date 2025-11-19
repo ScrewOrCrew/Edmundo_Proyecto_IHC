@@ -2,47 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agendar Cita - AIMSS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="sidebar.css">
-    
     <style>
-        /* CENTRADO MAESTRO */
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header { width: 100%; }
-
-        .form-container {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            width: 100%;
-            max-width: 600px; /* Controla el ancho */
-            margin-top: 10px;
-        }
-
-        label { display: block; color: var(--imss-dark); font-weight: 700; margin-bottom: 8px; margin-top: 20px; }
-        
-        input, select {
-            width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc;
-            font-family: 'Montserrat', sans-serif; background-color: #fff; box-sizing: border-box;
-        }
-        input:focus, select:focus { border-color: var(--imss-gold); outline: none; }
-
-        .btn-primary {
-            display: block; width: 100%; padding: 15px;
-            background-color: var(--imss-green); color: white;
-            text-align: center; text-decoration: none; border-radius: 10px;
-            font-weight: 700; margin-top: 30px; border: none; cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn-primary:hover { background-color: var(--imss-dark); }
+        /* Usamos el estilo global del sidebar.css, solo centramos el form */
+        .main-content { align-items: center; } 
     </style>
 </head>
 <body>
@@ -50,8 +14,8 @@
         <div class="main-content">
             <header>Agendar Nueva Cita</header>
             
-            <div class="form-container">
-                <h3 style="text-align:center; color:var(--imss-green); margin-top:0;">Detalles de la Consulta</h3>
+            <div class="box-container" style="max-width: 600px;">
+                <h3>Detalles de la Consulta</h3>
                 
                 <label>Especialidad</label>
                 <select>
@@ -75,7 +39,7 @@
                     <option>Vespertino</option>
                 </select>
 
-                <a href="06b-mis-citas.html" class="btn-primary">Confirmar Cita</a>
+                <a href="06b-mis-citas.html" class="button">Confirmar Cita</a>
             </div>
         </div>
     </div>

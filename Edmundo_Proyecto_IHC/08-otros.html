@@ -6,30 +6,24 @@
     <link rel="stylesheet" href="sidebar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
-        /* Grid responsive */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
+            width: 100%; /* Ancho completo */
         }
-        /* Uso de variables para soportar alto contraste */
         .tramite-card {
-            background: var(--card-bg); /* Variable clave */
+            background: var(--card-bg);
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.2s;
-            border-top: 5px solid var(--imss-red); /* Variable */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 180px;
-            text-decoration: none;
-            color: var(--text-color); /* Variable */
+            border-top: 5px solid var(--imss-red);
+            display: flex; flex-direction: column; justify-content: space-between; height: 180px;
+            text-decoration: none; color: var(--text-color);
         }
         .tramite-card:hover { transform: translateY(-5px); }
         .tramite-card h3 { margin: 0 0 10px 0; color: var(--imss-green); font-size: 18px; }
-        .tramite-card p { font-size: 13px; color: inherit; opacity: 0.8; line-height: 1.4; margin: 0; }
         .icon-right { align-self: flex-end; color: var(--imss-gold); font-size: 35px; }
     </style>
 </head>
@@ -43,7 +37,7 @@
                     <span class="material-icons-round icon-right">fingerprint</span>
                 </a>
                 <a href="08b-no-derecho.html" class="tramite-card">
-                    <div><h3>Constancia No Derechohabiencia</h3><p>Documento que certifica que no tienes servicio vigente.</p></div>
+                    <div><h3>Constancia No Derechohabiencia</h3><p>Documento que certifica no tener servicio vigente.</p></div>
                     <span class="material-icons-round icon-right">block</span>
                 </a>
                 <a href="08c-cartilla.html" class="tramite-card">

@@ -1,84 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Descargar Constancia</title>
-
+    <meta charset="UTF-8">
+    <title>Descarga Lista</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f3f8f6;
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-        }
-
-        header {
-            background-color: #006657;
-            color: white;
-            padding: 15px;
-            font-size: 20px;
-        }
-
-        .container {
-            padding: 25px;
-        }
-
-        .box {
-            background: white;
-            padding: 25px;
-            max-width: 380px;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-
-        .success-icon {
-            font-size: 45px;
-            color: #009879;
-            margin-bottom: 10px;
-        }
-
-        .button {
-            display: block;
-            background-color: #009879;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 18px;
-        }
-
-        .back {
-            margin-top: 20px;
-        }
-
-        .back a {
-            color: #006657;
-            text-decoration: none;
-        }
+        .success-icon { font-size: 60px; color: var(--imss-green); display: block; text-align: center; margin-bottom: 10px;}
     </style>
 </head>
-
 <body>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Vigencia de Derechos</header>
+            <div class="box-container">
+                <span class="material-icons-round success-icon">cloud_download</span>
+                <h3>Documento Listo</h3>
+                <p>Tu constancia de vigencia se ha generado correctamente.</p>
 
-    <header>Descarga Lista</header>
+                <div style="background: var(--bg-color); padding: 15px; border-radius: 8px; margin: 20px 0; display:flex; align-items:center; justify-content:center;">
+                    <span class="material-icons-round" style="margin-right:10px; color:var(--imss-red);">picture_as_pdf</span>
+                    <span style="font-weight:600;">Constancia_Vigencia_2025.pdf</span>
+                </div>
 
-    <div class="container">
-
-        <div class="box">
-            <div class="success-icon">✔</div>
-            <h2 style="color:#006657;">Constancia Lista</h2>
-            <p style="color:#444; font-size:14px;">
-                Tu constancia de vigencia está lista para descargar.  
-                Haz clic en el botón para obtener el archivo.
-            </p>
-
-            <!-- Aquí solo simula la descarga -->
-            <a href="05-inicio.html" class="button">Volver a Inicio</a>
+                <a href="05-inicio.html" class="button">Volver al Inicio</a>
+            </div>
         </div>
     </div>
-
+    <script src="sidebar.js"></script>
 </body>
 </html>
