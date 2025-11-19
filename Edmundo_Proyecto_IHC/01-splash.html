@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantalla de Carga</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #006657;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .loader {
+            border: 6px solid #ffffff60;
+            border-top: 6px solid #ffffff;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <!-- Redirección al login (02-login.html) -->
+    <meta http-equiv="refresh" content="2; url=02-login.html" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>IMSS</h1>
+        <p>Cargando...</p>
+        <div class="loader"></div>
+    </div>
+    <script>
+        document.addEventListener('keydown', e => e.key === 'Enter' && (window.location.href = '02-login.html'));
+    </script>
+</body>
+</html>

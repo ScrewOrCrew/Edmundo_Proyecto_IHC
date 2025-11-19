@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corrección de Datos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { background-color: #f3f8f6; font-family: 'Montserrat', sans-serif; margin: 0; }
+        header { background-color: #006657; color: white; padding: 15px; text-align: center; font-weight: 700; }
+        .box-container { max-width: 450px; margin: 40px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        label { color: #006657; font-weight: bold; display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; font-family: 'Montserrat', sans-serif; }
+        .button { width: 100%; display: block; text-align: center; padding: 12px 0; background-color: #009879; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; }
+        .back { text-align: center; margin-top: 20px; }
+        .back a { color: #006657; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>Corrección de Datos</header>
+    <div class="box-container">
+        <p style="color:#666; font-size:14px;">Solicita la corrección de tu nombre, fecha de nacimiento o lugar de nacimiento.</p>
+
+        <label>Dato a corregir</label>
+        <select>
+            <option>Nombre completo</option>
+            <option>Fecha de Nacimiento</option>
+            <option>Entidad de Nacimiento</option>
+            <option>Sexo</option>
+        </select>
+
+        <label>CURP Correcta</label>
+        <input type="text" placeholder="Ingresa la CURP tal cual aparece en RENAPO" />
+
+        <label>Teléfono de contacto</label>
+        <input type="tel" placeholder="Móvil o fijo" />
+
+        <a href="#" class="button" onclick="alert('Solicitud enviada. Recibirás respuesta en 72hrs.')">Enviar Solicitud</a>
+    </div>
+    <div class="back"><a href="08-otros.html">⬅ Regresar</a></div>
+</body>
+</html>

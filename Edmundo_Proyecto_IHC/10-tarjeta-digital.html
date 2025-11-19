@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjeta Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+        /* Estilos Sidebar (Mismo de siempre) */
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; background-color: #f5f5f5; height: 100vh; display: flex; }
+        .sidebar { width: 250px; background-color: #e0e0e0; display: flex; flex-direction: column; padding: 20px; flex-shrink: 0; }
+        .logo-area { display: flex; align-items: center; margin-bottom: 40px; color: #10312B; font-weight: 700; font-size: 20px; }
+        .menu { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
+        .menu li { margin-bottom: 10px; }
+        .menu a { display: flex; align-items: center; text-decoration: none; color: #666; padding: 12px 15px; border-radius: 12px; font-weight: 600; transition: all 0.3s; }
+        .menu a.active { background-color: #006657; color: white; box-shadow: 0 4px 10px rgba(0,102,87,0.2); }
+        .menu a:hover:not(.active) { background-color: #d6d6d6; color: #006657; }
+        .material-icons-round { margin-right: 15px; font-size: 20px; }
+        .main-content { flex-grow: 1; padding: 30px; overflow-y: auto; display: flex; flex-direction: column; align-items: center; }
+
+        /* Estilo Tarjeta */
+        .id-card {
+            background: linear-gradient(135deg, #006657 0%, #10312B 100%);
+            width: 100%; max-width: 400px; border-radius: 20px; padding: 25px;
+            color: white; box-shadow: 0 15px 30px rgba(0,0,0,0.3); position: relative;
+            overflow: hidden; border: 2px solid #BC955C; margin-top: 20px;
+        }
+        .id-card::before {
+            content: ""; position: absolute; top: -50px; right: -50px; width: 180px; height: 180px;
+            background: rgba(255,255,255,0.1); border-radius: 50%;
+        }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .logo-text { font-weight: 800; font-size: 22px; letter-spacing: 1px; }
+        .user-photo {
+            width: 70px; height: 70px; background: white; border-radius: 50%;
+            border: 3px solid #BC955C; display: flex; justify-content: center; align-items: center;
+            color: #006657; font-weight: bold; font-size: 24px;
+        }
+        .info-label { font-size: 10px; color: #DDC9A3; text-transform: uppercase; margin-top: 10px; display: block; }
+        .info-value { font-size: 18px; font-weight: 600; letter-spacing: 1px; }
+        .qr-area { background: white; height: 50px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #333; font-size: 12px; font-weight: bold; opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-area"><span class="material-icons-round" style="font-size:30px; color:#006657;">health_and_safety</span> AIMSS</div>
+        <ul class="menu">
+            <li><a href="05-inicio.html"><span class="material-icons-round">dashboard</span>Inicio</a></li>
+            <li><a href="06-citas.html"><span class="material-icons-round">calendar_today</span>Citas</a></li>
+            <li><a href="12-directorio.html"><span class="material-icons-round">medical_services</span>Doctor</a></li>
+            <li><a href="07-vigencia.html"><span class="material-icons-round">verified</span>Vigencia</a></li>
+            <li><a href="09-configuracion.html"><span class="material-icons-round">settings</span>Ajustes</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h2 style="color:#006657;">Mi Tarjeta Digital</h2>
+        
+        <div class="id-card">
+            <div class="card-header">
+                <div>
+                    <div class="logo-text">IMSS</div>
+                    <div style="font-size:12px; color:#DDC9A3;">BIENESTAR</div>
+                </div>
+                <div class="user-photo">JP</div>
+            </div>
+
+            <div>
+                <span class="info-label">ASEGURADO</span>
+                <span class="info-value">JUAN PÉREZ MARTÍNEZ</span>
+                
+                <span class="info-label">NSS</span>
+                <span class="info-value">1234 5678 90</span>
+
+                <span class="info-label">CLÍNICA (UMF)</span>
+                <span class="info-value">UMF 23 CDMX</span>
+            </div>
+
+            <div class="qr-area">||| CÓDIGO QR DE ACCESO |||</div>
+        </div>
+        
+        <p style="margin-top:20px; color:#666;">Presenta este código en ventanilla.</p>
+    </div>
+</body>
+</html>

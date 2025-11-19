@@ -1,0 +1,173 @@
+/* FUENTES Y VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+    --imss-green: #006657;     /* Pantone 561 C */
+    --imss-gold: #BC955C;      /* Pantone 465 C */
+    --imss-red: #9F2241;       /* Pantone 7420 C */
+    --imss-dark: #10312B;      /* Pantone 627 C */
+    --bg-color: #f3f8f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --sidebar-width: 260px;
+    --sidebar-collapsed: 80px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* --- MODO ALTO CONTRASTE --- */
+body.high-contrast {
+    --imss-green: #000000;
+    --imss-gold: #FFD700;
+    --bg-color: #121212;
+    --card-bg: #1E1E1E;
+    --text-color: #FFFFFF;
+}
+body.high-contrast .sidebar { background-color: #000; border-right: 2px solid #FFD700; }
+body.high-contrast .sidebar-item.active { background-color: #FFD700; color: #000; }
+
+/* --- LAYOUT PRINCIPAL --- */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR MODERNIZADO (HOVER) --- */
+.sidebar {
+    width: var(--sidebar-collapsed); /* Por defecto colapsado en escritorio */
+    background-color: #ffffff;
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    z-index: 1000;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.05);
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+/* Expandir al pasar el mouse */
+.sidebar:hover {
+    width: var(--sidebar-width);
+}
+
+.sidebar-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--imss-green);
+    color: white;
+    overflow: hidden;
+}
+
+.sidebar-logo img {
+    width: 40px;
+    height: auto;
+    display: block;
+}
+
+.sidebar-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 15px;
+    opacity: 0; /* Oculto cuando está colapsado */
+    transition: opacity 0.3s;
+}
+
+.sidebar:hover .sidebar-title { opacity: 1; }
+
+.sidebar-nav { padding-top: 20px; }
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s;
+    border-left: 5px solid transparent;
+}
+
+.sidebar-item:hover { background-color: #f0f0f0; color: var(--imss-green); }
+
+.sidebar-item.active {
+    background-color: #e8f5e9;
+    color: var(--imss-green);
+    border-left-color: var(--imss-gold); /* Detalle dorado oficial */
+    font-weight: 600;
+}
+
+.sidebar-icon {
+    font-size: 24px;
+    min-width: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-text {
+    margin-left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar:hover .sidebar-text { opacity: 1; }
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-collapsed); /* Deja espacio para el sidebar colapsado */
+    padding: 30px;
+    transition: margin-left 0.4s;
+}
+
+/* HEADER SUPERIOR DE PÁGINA */
+header {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--imss-dark);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--imss-gold); /* Línea dorada estilo PDF */
+    padding-bottom: 10px;
+}
+
+/* --- COMPONENTES GENERALES --- */
+.card, .box, .tramite-box {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover, .tramite-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* BOTONES OFICIALES */
+.button, button {
+    background-color: var(--imss-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.button:hover, button:hover { background-color: var(--imss-dark); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sidebar { width: 0; }
+    .sidebar:hover { width: 250px; }
+    .main-content { margin-left: 0; padding: 15px; }
+    .sidebar.mobile-active { width: 250px; }
+}

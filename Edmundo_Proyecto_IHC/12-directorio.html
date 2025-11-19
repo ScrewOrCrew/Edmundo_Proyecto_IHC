@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Directorio</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+        .hospital-card {
+            display: flex;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .hospital-img {
+            width: 120px;
+            background-size: cover;
+            background-position: center;
+        }
+        .hospital-info { padding: 20px; flex: 1; }
+        .hospital-info h3 { margin: 0 0 5px; color: var(--imss-green); }
+        .tag { background: #eee; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: #555; }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Directorio de Unidades</header>
+            
+            <input type="text" placeholder="Buscar clínica..." style="width:100%; padding:15px; border-radius:30px; border:1px solid #ccc; margin-bottom:30px;">
+
+            <div class="hospital-card">
+                <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/martha-dominguez-de-gouveia-KF-h9HMxRKg-unsplash.jpg');"></div>
+                <div class="hospital-info">
+                    <h3>HGR 46 - Guadalajara</h3>
+                    <p>Calz. Lázaro Cárdenas 2063</p>
+                    <span class="tag">Urgencias 24h</span> <span class="tag">Especialidades</span>
+                </div>
+            </div>
+
+            <div class="hospital-card">
+                <div class="hospital-img" style="background-image: url('IMÁGENES PARA EL AIMSS/jeshoots-com-l0j0DHVWcIE-unsplash.jpg');"></div>
+                <div class="hospital-info">
+                    <h3>UMF 34 - Zapopan</h3>
+                    <p>Av. Colón 2000</p>
+                    <span class="tag">Medicina Familiar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+</body>
+</html>

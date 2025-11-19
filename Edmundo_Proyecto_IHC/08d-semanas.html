@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semanas Cotizadas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { background-color: #f3f8f6; font-family: 'Montserrat', sans-serif; margin: 0; }
+        header { background-color: #006657; color: white; padding: 15px; text-align: center; font-weight: 700; }
+        .box-container { max-width: 400px; margin: 40px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        label { color: #006657; font-weight: bold; display: block; margin-bottom: 5px; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; font-family: 'Montserrat', sans-serif; }
+        .button { width: 100%; display: block; text-align: center; padding: 12px 0; background-color: #BC955C; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; } /* Usamos dorado aquí */
+        .back { text-align: center; margin-top: 20px; }
+        .back a { color: #006657; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>Semanas Cotizadas</header>
+    <div class="box-container">
+        <h3 style="color:#006657; text-align:center; margin-top:0;">Consulta de Semanas</h3>
+        <p style="color:#666; font-size:14px;">Obtén tu reporte detallado de cotización al IMSS.</p>
+
+        <label>CURP</label>
+        <input type="text" placeholder="Ingresa tu CURP" />
+
+        <label>NSS</label>
+        <input type="number" placeholder="Número de Seguridad Social" />
+
+        <a href="#" class="button" onclick="alert('Reporte descargado correctamente.')">Descargar Reporte</a>
+    </div>
+    <div class="back"><a href="08-otros.html">⬅ Regresar</a></div>
+</body>
+</html>

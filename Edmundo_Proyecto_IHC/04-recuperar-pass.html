@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - IMSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; padding: 0; font-family: 'Montserrat', sans-serif;
+            background-image: url('IMÁGENES PARA EL AIMSS/humberto-chavez-FVh_yqLR9eA-unsplash.jpg');
+            background-size: cover; background-position: center;
+            height: 100vh; display: flex; justify-content: center; align-items: center;
+        }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 102, 87, 0.85); z-index: -1;
+        }
+
+        .card {
+            background: white; width: 90%; max-width: 400px; padding: 40px;
+            border-radius: 15px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); text-align: center;
+        }
+        
+        h2 { color: #006657; margin: 0 0 10px; font-weight: 700; }
+        p { color: #666; font-size: 14px; margin-bottom: 30px; line-height: 1.5; }
+        
+        label { display: block; text-align: left; color: #10312B; font-weight: 700; font-size: 12px; margin-bottom: 5px; margin-left: 5px;}
+
+        input {
+            width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 8px;
+            outline: none; font-family: 'Montserrat', sans-serif;
+        }
+        input:focus { border-color: #BC955C; }
+        
+        .btn {
+            width: 100%; padding: 15px; background-color: #006657; color: white;
+            border-radius: 30px; font-weight: 700; text-decoration: none; display: block; margin-top: 20px; transition: background 0.3s;
+        }
+        .btn:hover { background-color: #10312B; }
+        
+        .back { display: block; margin-top: 25px; color: #BC955C; text-decoration: none; font-size: 14px; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div style="font-size: 50px; margin-bottom: 15px;">🔒</div>
+        <h2>Recuperar Acceso</h2>
+        <p>No te preocupes. Ingresa tu correo o CURP y te enviaremos las instrucciones para restablecerla.</p>
+
+        <label>Correo o CURP</label>
+        <input type="text" placeholder="Ej. usuario@correo.com">
+
+        <a href="02-login.html" class="btn" onclick="alert('Instrucciones enviadas a tu correo.');">Enviar Instrucciones</a>
+        <a href="02-login.html" class="back">Cancelar y volver</a>
+    </div>
+</body>
+</html>

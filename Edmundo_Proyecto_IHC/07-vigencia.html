@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Vigencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
+    <style>
+        /* ESTILO PARA CENTRAR EL CUADRO PERFECTAMENTE */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra horizontalmente todo el contenido del main */
+        }
+        
+        /* El formulario */
+        .form-box { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            width: 100%;
+            max-width: 500px; /* Ancho máximo controlado */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        header { width: 100%; text-align: left; } /* El título se queda a la izquierda o centro según prefieras */
+
+        label { display: block; color: var(--imss-dark); font-weight: 700; margin: 20px 0 8px; }
+        input { 
+            width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 8px; 
+            font-family: 'Montserrat', sans-serif; box-sizing: border-box;
+        }
+        input:focus { border-color: var(--imss-gold); outline: none; }
+        
+        .btn { display: block; width: 100%; padding: 15px; background-color: var(--imss-green); color: white; text-align: center; text-decoration: none; border-radius: 8px; margin-top: 30px; font-weight: 700; border:none; cursor: pointer; transition:0.3s;}
+        .btn:hover { background-color: var(--imss-dark); }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="main-content">
+            <header>Consulta de Vigencia</header>
+            
+            <div class="form-box">
+                <h2 style="color:var(--imss-green); margin-top:0; text-align:center;">Vigencia de Derechos</h2>
+                <p style="color:#666; font-size:14px; text-align:center; margin-bottom:30px;">
+                    Ingresa tus datos para verificar si tu servicio médico está activo.
+                </p>
+                
+                <label>CURP</label>
+                <input type="text" placeholder="Ingresa tu CURP">
+
+                <label>Correo Electrónico</label>
+                <input type="email" placeholder="Para recibir el reporte PDF">
+
+                <a href="07b-constancia.html" class="btn">Consultar Estatus</a>
+            </div>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+</body>
+</html>
