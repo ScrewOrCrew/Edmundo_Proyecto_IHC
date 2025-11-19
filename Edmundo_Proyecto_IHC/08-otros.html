@@ -6,68 +6,71 @@
     <link rel="stylesheet" href="sidebar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
-        /* GRID CENTRADO Y RESPONSIVE */
-        .grid-container {
-            display: grid;
-            /* Esto crea columnas automáticas de mínimo 300px y máximo 1 fracción del espacio */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* CONTENEDOR FLEXIBLE CENTRADO */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que bajen si no caben, pero mantiene el orden */
+            justify-content: center; /* Centra todos los elementos horizontalmente */
             gap: 25px;
             width: 100%;
-            max-width: 1000px; /* Limita el ancho para que no se dispersen en pantallas gigantes */
-            margin: 20px auto; /* Centra el contenedor grid */
+            margin-top: 100px;
         }
 
         .tramite-card {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.2s;
-            border-top: 6px solid var(--imss-red);
+            border-top: 5px solid var(--imss-red);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 200px; /* Altura fija para uniformidad */
+            
+            /* Tamaño fijo para asegurar alineación horizontal perfecta */
+            width: 250px; 
+            height: 150px;
+            
             text-decoration: none;
             color: var(--text-color);
         }
 
         .tramite-card:hover { 
             transform: translateY(-5px); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
         }
-
+        
         .tramite-card h3 { 
             margin: 0 0 10px 0; 
             color: var(--imss-green); 
             font-size: 18px; 
-            font-weight: 700;
         }
-
+        
         .tramite-card p { 
             font-size: 13px; 
             opacity: 0.8; 
-            line-height: 1.5; 
+            line-height: 1.4; 
             margin: 0; 
         }
-
+        
         .icon-right { 
             align-self: flex-end; 
             color: var(--imss-gold); 
-            font-size: 40px; 
+            font-size: 35px; 
         }
     </style>
 </head>
 <body>
+
     <div class="page-container">
         <div class="main-content">
             <header>Gestión de Trámites</header>
 
-            <div class="grid-container">
+            <div class="flex-container">
                 <a href="08a-nss.html" class="tramite-card">
                     <div>
                         <h3>Asignación de NSS</h3>
-                        <p>Obtén o localiza tu Número de Seguridad Social único.</p>
+                        <p>Obtén o consulta tu Número de Seguridad Social.</p>
                     </div>
                     <span class="material-icons-round icon-right">fingerprint</span>
                 </a>
@@ -106,6 +109,7 @@
             </div>
         </div>
     </div>
+
     <script src="sidebar.js"></script>
 </body>
 </html>
