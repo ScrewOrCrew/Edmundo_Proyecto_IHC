@@ -6,50 +6,101 @@
     <link rel="stylesheet" href="sidebar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
+        /* GRID CENTRADO Y RESPONSIVE */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            width: 100%; /* Ancho completo */
+            /* Esto crea columnas automáticas de mínimo 300px y máximo 1 fracción del espacio */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px; /* Limita el ancho para que no se dispersen en pantallas gigantes */
+            margin: 20px auto; /* Centra el contenedor grid */
         }
+
         .tramite-card {
             background: var(--card-bg);
-            padding: 25px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.2s;
-            border-top: 5px solid var(--imss-red);
-            display: flex; flex-direction: column; justify-content: space-between; height: 180px;
-            text-decoration: none; color: var(--text-color);
+            border-top: 6px solid var(--imss-red);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 200px; /* Altura fija para uniformidad */
+            text-decoration: none;
+            color: var(--text-color);
         }
-        .tramite-card:hover { transform: translateY(-5px); }
-        .tramite-card h3 { margin: 0 0 10px 0; color: var(--imss-green); font-size: 18px; }
-        .icon-right { align-self: flex-end; color: var(--imss-gold); font-size: 35px; }
+
+        .tramite-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+        }
+
+        .tramite-card h3 { 
+            margin: 0 0 10px 0; 
+            color: var(--imss-green); 
+            font-size: 18px; 
+            font-weight: 700;
+        }
+
+        .tramite-card p { 
+            font-size: 13px; 
+            opacity: 0.8; 
+            line-height: 1.5; 
+            margin: 0; 
+        }
+
+        .icon-right { 
+            align-self: flex-end; 
+            color: var(--imss-gold); 
+            font-size: 40px; 
+        }
     </style>
 </head>
 <body>
     <div class="page-container">
         <div class="main-content">
             <header>Gestión de Trámites</header>
+
             <div class="grid-container">
                 <a href="08a-nss.html" class="tramite-card">
-                    <div><h3>Asignación de NSS</h3><p>Obtén o consulta tu Número de Seguridad Social.</p></div>
+                    <div>
+                        <h3>Asignación de NSS</h3>
+                        <p>Obtén o localiza tu Número de Seguridad Social único.</p>
+                    </div>
                     <span class="material-icons-round icon-right">fingerprint</span>
                 </a>
+
                 <a href="08b-no-derecho.html" class="tramite-card">
-                    <div><h3>Constancia No Derechohabiencia</h3><p>Documento que certifica no tener servicio vigente.</p></div>
+                    <div>
+                        <h3>Constancia No Derechohabiencia</h3>
+                        <p>Documento que certifica no tener servicio vigente.</p>
+                    </div>
                     <span class="material-icons-round icon-right">block</span>
                 </a>
+
                 <a href="08c-cartilla.html" class="tramite-card">
-                    <div><h3>Reimpresión de Cartilla</h3><p>Recupera la carátula de tu cartilla nacional.</p></div>
+                    <div>
+                        <h3>Reimpresión de Cartilla</h3>
+                        <p>Recupera la carátula de tu cartilla nacional.</p>
+                    </div>
                     <span class="material-icons-round icon-right">book</span>
                 </a>
+
                 <a href="08d-semanas.html" class="tramite-card">
-                    <div><h3>Semanas Cotizadas</h3><p>Consulta tu historial de cotización laboral.</p></div>
+                    <div>
+                        <h3>Semanas Cotizadas</h3>
+                        <p>Consulta tu historial de cotización laboral.</p>
+                    </div>
                     <span class="material-icons-round icon-right">history</span>
                 </a>
+                
                 <a href="08f-beneficiarios.html" class="tramite-card">
-                    <div><h3>Alta de Beneficiarios</h3><p>Registra a tus familiares para recibir atención.</p></div>
+                    <div>
+                        <h3>Alta de Beneficiarios</h3>
+                        <p>Registra a tus familiares para recibir atención.</p>
+                    </div>
                     <span class="material-icons-round icon-right">family_restroom</span>
                 </a>
             </div>
